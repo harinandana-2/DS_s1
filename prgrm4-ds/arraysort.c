@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main() {
+	int a[100],b[100];
+	int n1,n2,i,temp,total,size=0;
+	
+	printf("enter how many elements in array :");
+	scanf("%d",&n1);
+	printf("enter first array");
+	for(i=0;i<n1;i++) {
+		scanf("%d",&a[i]);
+	}
+	printf("\n enter how much element in second array : ");
+	scanf("%d",&n2);
+	printf("enter 2nd array");
+	for(i=0;i<n2;i++){
+		scanf("%d",&b[i]);
+	}
+	total=n1+n2;
+	for(i=n1;i<total;i++){
+		a[i]=b[size];
+		size++;
+		}
+	   for(int j=0;j<total-1;j++)
+		{
+			if(a[j]>a[j+1])
+			{
+			   temp=a[j];
+			   a[j]=a[j+1];
+			   a[j+1]=temp;
+			   }
+			}
+			
+	printf("sorted merged array element are : \n");
+	for(i=0;i<total;i++){
+		printf("%d\n",a[i]);
+		}
+		return 0;
+		}
